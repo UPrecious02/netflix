@@ -15,46 +15,72 @@ body {
 }
 
 
-/* Styling of the navigation menu bar */
 
-.navbar {
-    padding: 5px 0px;
-    text-decoration: none;
+/*First Section STYLING */
+
+.mainSection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url(./images/netflix1.jpg);background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    background-color: rgba(31, 1, 1, 0.8);
+    margin-bottom: 1px;
 }
 
-.navdiv {
+.navigation {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation img {
+    cursor: pointer;
+    width: 140px;
+    transition: 0.3s;
+    transition-property: transform;
+}
+
+.navigation img:hover {
+    transform: scale(1.2);
+}
+.menuItems {
+    background: transparent;
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    width: 90%;
-    padding: 0;
-    vertical-align: middle;
+    align-content: center;
 }
 
-.logo {
-    width: 140px;
-    padding: 0px;
-    margin: 0px;
-}
-
-.menuItems  li {
+.menuItems li {
     list-style-type: none;
-    display: inline-block;
+    transition: 0.3s;
+    transition-property: transform;
+}
+
+.menuItems li:hover {
+    transform: scale(1.2);
 }
 
 .menuItems li a {
-    color: black;
-    margin-right: 50px;
+    color: white;
+    margin: 0 40px;
     text-decoration: none;
     padding: 10px;
 }
 
-.menuItems li a:hover {
-    background-color: #fafafa;
-}
-
-.navdiv > .login-button {
+.navigation .login-button {
     color: white;
     text-decoration: none;
     font-size: 15px;
@@ -65,36 +91,36 @@ body {
     background-color: rgb(148, 5, 5);
     margin-right: 15px;
     cursor: pointer;
+    transition: 0.3s;
+    transition-property: transform;
 }
 
-.navdiv > .login-button:hover {
+.navigation .login-button:hover {
     color: black;
     background-color: white;
     border: 1px solid black;
+    transform: scale(1.1);
 }
 
-
-
-/* Styling of the first section */
-
 .firstSection {
-    align-content: center;
-    text-align: center;
-    width: auto;
-    height: 95vh;
-    background-image: url(./images/netflix1.jpg);
-    background-size: contain;
-    background-blend-mode: darken;
-    background-color: rgba(31, 1, 1, 0.8);
-    border-bottom: 1px solid #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: ;
+    margin: 100px;
 }
 
 .firstSection h1 {
     color: white;
     font-size: 5em;
     letter-spacing: -4px;
-    line-height: 1em;
+    line-height: 1.3em;
     margin-bottom: 40px;
+}
+
+.firstSection h1 span {
+    font-weight: 300;
+    font-size: 4rem;
 }
 
 .firstSection .enter-gate {
