@@ -55,8 +55,9 @@ body {
 }
 .menuItems {
     background: transparent;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
+    border: 1px solid #554949;
     height: 50px;
     display: flex;
     align-items: center;
@@ -170,6 +171,11 @@ body {
 .imageBox {
     display: flex;
     justify-content: flex-start;
+    transition: 0.3s;
+    transition-property: transform;
+}
+.imageBox:hover {
+    transform: scale(1.1);
 }
 .imageBox img {
     width: 100%;
@@ -215,6 +221,11 @@ body {
     height: 300px;
     position: relative;
     box-shadow: 0 1px 5px #35347e;
+    transition: 0.3s;
+    transition-property: transform;
+}
+.boxes:hover {
+    transform: scale(1.05);
 }
 
 .boxes h3 {
@@ -331,6 +342,11 @@ footer {
     list-style-type: none;
     text-align: left;
     padding: 0 0 10px 0;
+    transition: 0.3s;
+    transition-property: transform;
+}
+.footer-menu ul li:hover {
+    transform: scale(1.1);
 }
 
 .footer-menu ul li a {
