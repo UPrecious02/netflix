@@ -97,7 +97,7 @@ body {
     margin-bottom: 40px;
 }
 
-.firstSection button {
+.firstSection .enter-gate {
     color: white;
     font-size: 16px;
     padding: 15px 65px;
@@ -106,9 +106,10 @@ body {
     background-color: rgb(148, 5, 5);
     margin-right: 15px;
     cursor: pointer!;
+    text-decoration: none;
 }
 
-.firstSection button:hover {
+.firstSection .enter-gate:hover {
     background-color: white;
     color: rgb(148, 5, 5);
 }
@@ -116,31 +117,35 @@ body {
 /*Styling for 2nd Section */
 
 .secondSection {
-    height: 75vh;
+    min-height: 80vh;
     background-color: #000;
     padding: 40px;
     align-content: center;
 }
 
 .subSection1 {
-    width: 85%;
+    width: 90%;
     margin: auto;
 }
 
 .subSection1 h2 {
-    font-size: 2.5em;
+    font-size: 2.2em;
     text-align: left;
     color: white;
+    margin-bottom: 40px;
 }
 
 .innerSection1 {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin: auto;
 }
 
 .imageBox {
+    display: flex;
+    justify-content: flex-start;
+}
+.imageBox img {
     width: 100%;
 }
 
@@ -148,54 +153,55 @@ body {
 
 .thirdSection {
     height: 75vh;
-    background-color: #fafafa;
+    background-color: #000;
     padding: 40px;
     align-content: center;
 }
 
 .subSection2 {
-    width: 85%;
+    width: 90%;
     margin: auto;
 }
 
 .subSection2 h2 {
-    font-size: 2.5em;
+    letter-spacing: -1px;
+    font-size: 2.2em;
     text-align: left;
+    margin-bottom: 20px;
+    color: white;
 }
 
 .innerSection {
     display: flex;
     align-items: center;
     align-content: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .boxes {
-    background: rgb(2,0,36);
     background: linear-gradient(354deg, rgba(2,0,36,1) 0%, rgba(3,3,41,1) 34%, rgba(19,140,164,1) 100%);
     color: white;
     text-align: left;
-    padding: 20px 20px;
-    padding-bottom: 50px;
-    margin-right: 20px;
+    padding: 40px 20px 50px 20px;
+    margin-right: 30px;
     border-radius: 15px;
-    width: 50%;
-    height: 17em;
+    width: 70%;
+    height: 300px;
     position: relative;
-}
-
-.boxes:hover {
-    
+    box-shadow: 0 1px 5px #35347e;
 }
 
 .boxes h3 {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 500;
     line-height: 22px;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
 }
 
 .boxes p {
     font-weight: 300;
+    z-index: 1;
 }
 
 .boxes img {
@@ -223,9 +229,10 @@ body {
     text-align: center;
     color: white;
     font-weight: 400;
+    margin-bottom: 20px;
 }
 
-input {
+.innerSection2 input {
     padding: 18px;
     background-color: rgb(15, 15, 15);
     color: white;
@@ -234,19 +241,101 @@ input {
     box-sizing: border-box;
     border-radius: 5px;
 }
-
-input[type=email] {
-    width: 50%;
-    margin: 0 10px;
+.innerSection2 input:hover {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #c0bebe;
 }
 
-input[type=submit] {
+.innerSection2 input[type=email] {
+    width: 50%;
+    margin: 0 10px 0 0;
+}
+
+.innerSection2 input[type=submit] {
     background-color: rgb(148, 5, 5);
     color: white;
     padding-left: 50px;
     padding-right: 50px;
     cursor: pointer;
 }
+
+.innerSection2 input[type=submit]:hover {
+    background-color: white;
+    color: rgb(148, 5, 5);
+}
+
+
+/* Styling for the Landing Page FOOTER */
+
+footer {
+    background-color: black;
+    padding: 40px;
+    min-height: 75vh;
+    font-weight: 300;
+    margin-top: 1px;
+    color: #ebe8e8;
+    margin: auto;
+    align-content: flex-start;
+}
+
+.footer-wrapper {
+    width: 85%;
+    margin: auto;
+}
+
+.footer-wrapper h3 {
+    text-align: left;
+    text-decoration: underline;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 13px;
+}
+
+.footer-menu {
+    width: 80%;
+}
+
+.footer-menu ul li {
+    list-style-type: none;
+    text-align: left;
+    padding: 0 0 10px 0;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: #fafafa;
+}
+.footer-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.signature {
+    text-align: left;
+    margin-top: 60px;
+}
+.signature select {
+    margin-bottom: 40px;
+    padding: 7px 30px;
+    background-color: transparent;
+    border: 1px solid #c0bebe;
+    color: #ebe8e8;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
 
 /* Styling for the LOGIN PAGE */
 
@@ -266,7 +355,7 @@ margin: auto;
 color: white;
 background-color: transparent;
 border: 2px solid rgba(255, 255, 255, .2);
-backdrop-filter: blur(30px);
+backdrop-filter: blur(20px);
 width: 420px;
 border-radius: 12px;
 padding: 30px 40px;
